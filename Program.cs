@@ -40,8 +40,7 @@ class Program
         {
             remainingHP = CalculateRemainingHealth(remainingHP, weaponDamage);
             DisplayBossStatut(remainingHP);
-        } while (Console.ReadLine() == "Attaquer")
-            ;
+        } while (Console.ReadLine() == "Attaquer");
 
     }
     static int CalculateWeaponDamage(int weaponPower, int bonus)
@@ -56,12 +55,8 @@ class Program
     }
     static void DisplayBossStatut(int remainingHP)
     {
-        do
-        {
             Console.WriteLine("Le boss a " + remainingHP + " restant !");
             Console.WriteLine("Voulez vous attaquer de nouveau? Si oui tapez Attaquer.");
-            
-        } while (Console.ReadLine() == "Attaquer");
         if (remainingHP <= 0)
         {
             Console.WriteLine("Le boss est mort, vous avez gagné !");
